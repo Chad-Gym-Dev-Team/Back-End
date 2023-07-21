@@ -1,0 +1,4 @@
+20220417	14:19:23	6706af71-06b2-47c5-bc70-1a30c134ccec	Error: ENOENT: no such file or directory, stat '/home/isaac/Documents/node-reaact/views/index.html'
+20230610	18:41:11	927af3c2-81e0-40e4-8634-9e053cb10e6b	Error: Not allowed by CORS
+20230610	18:41:18	3cb92b9f-1d76-4cbd-a5e7-c62c7340cb0f	Error: Not allowed by CORS
+20230610	18:41:35	41bc241a-5ec7-47ba-b541-daee5a1f1cfc	Error: Not allowed by CORS
