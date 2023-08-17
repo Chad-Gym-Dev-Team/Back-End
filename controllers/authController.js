@@ -41,7 +41,7 @@ const handleLogin = async (req, res) => {
 			secure: true,
 			maxAge: 24 * 60 * 60 * 1000,
 		});
-		res.json({_id: updatedUser._id, updatedUser: user.username, accessToken: accessToken });
+		res.json({_id: updatedUser._id, user: user.username, accessToken: accessToken });
 	} else {
 		res.sendStatus(401);
 	}
