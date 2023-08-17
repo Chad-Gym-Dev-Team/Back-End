@@ -2,3 +2,11 @@
 20230610	18:41:11	927af3c2-81e0-40e4-8634-9e053cb10e6b	Error: Not allowed by CORS
 20230610	18:41:18	3cb92b9f-1d76-4cbd-a5e7-c62c7340cb0f	Error: Not allowed by CORS
 20230610	18:41:35	41bc241a-5ec7-47ba-b541-daee5a1f1cfc	Error: Not allowed by CORS
+20230817	18:07:09	48401726-4360-43b6-89b9-378d0603fcf9	TypeError: Cannot read properties of undefined (reading 'username')
+20230817	18:10:34	d4c2f668-ae01-460f-9082-c63f1c20c9b1	TypeError: Cannot convert undefined or null to object
+20230817	18:14:00	971d4c7c-e343-420d-8108-2603da4c2059	TypeError: Cannot read properties of undefined (reading 'username')
+20230817	18:14:36	0d25f75f-24be-4fbf-80a8-a6440f06a036	TypeError: Cannot read properties of undefined (reading 'username')
+20230817	18:26:50	53a92f4b-4cff-4db6-953d-8520ac085864	TypeError: Cannot read properties of undefined (reading 'username')
+20230817	18:39:42	f5116c3e-f787-458d-a9c7-862a44fdb870	TypeError: req.roles.map is not a function
+20230817	18:44:15	68da0afd-02c9-4c70-aa0d-73d29a24862a	TypeError: req.roles.map is not a function
+20230817	18:47:58	54fc5e17-5af6-4759-a7a1-1461b38f3fbb	TypeError: rolesArray.includes(...).find is not a function

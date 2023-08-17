@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const connectDB = require('./config/db');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
@@ -9,6 +10,9 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const PORT = process.env.PORT || 3500;
+
+// Invoke connectDB
+connectDB()
 
 // custom middleware logger
 app.use(logger);
@@ -40,7 +44,7 @@ app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
 
 app.use(verifyJWT);
-app.use('/employees', require('./routes/api/employees'));
+app.use('/products', require('./routes/api/products'));
 
 app.all('*', (req, res) => {
     res.status(404);
@@ -55,4 +59,4 @@ app.all('*', (req, res) => {
 
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT} 🔥 http://localhost:${PORT}`));
