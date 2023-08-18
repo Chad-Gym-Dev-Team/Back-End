@@ -153,8 +153,6 @@ const createProductReview = async (req, res) => {
             comment,
         };
 
-        console.log(review);
-
         product.reviews.push(review);
 
         product.numReviews = product.reviews.length;
