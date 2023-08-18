@@ -22,14 +22,14 @@ const cartSchema = mongoose.Schema(
             },
         ],
         shippingAddress: {
-            address: { type: String, required: true },
-            city: { type: String, required: true },
-            postalCode: { type: String, required: true },
-            country: { type: String, required: true },
+            address: { type: String, required: false },
+            city: { type: String, required: false },
+            postalCode: { type: String, required: false },
+            country: { type: String, required: false },
         },
         paymentMethod: {
             type: String,
-            required: true,
+            required: false,
         },
         paymentResult: {
             id: { type: String },
@@ -39,36 +39,41 @@ const cartSchema = mongoose.Schema(
         },
         taxPrice: {
             type: Number,
-            required: true,
+            required: false,
             default: 0.0,
         },
         shippingPrice: {
             type: Number,
-            required: true,
+            required: false,
             default: 0.0,
         },
         totalPrice: {
             type: Number,
-            required: true,
+            required: false,
             default: 0.0,
         },
         isPaid: {
             type: Boolean,
-            required: true,
+            required: false,
             default: false,
         },
         paidAt: {
             type: Date,
-            required: true,
+            required: false,
         },
         isDelivered: {
             type: Boolean,
-            required: true,
+            required: false,
             default: false,
         },
         deliveredAt: {
             type: Date,
-            required: true,
+            required: false,
+        },
+        isDone: {
+            type: Boolean,
+            required: false,
+            default: false,
         },
     },
     {

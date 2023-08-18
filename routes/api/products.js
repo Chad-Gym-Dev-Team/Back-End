@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const productsController = require('../../controllers/productsController');
+const cartController = require('../../controllers/cartController');
 const ROLES_LIST = require('../../config/roles_list');
 const verifyRoles = require('../../middleware/verifyRoles');
 
@@ -10,9 +11,14 @@ router.route('/')
     .get(productsController.getProducts)
     .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), productsController.createProduct)
 
-// @route GET api/products/:id/reviews
+// @route POST api/products/:id/reviews
 router.route('/:id/reviews')
     .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor, ROLES_LIST.User), productsController.createProductReview);
+
+// @route POST api/products/:id/addtocart
+router.route('/:id/addtocart')
+    .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor, ROLES_LIST.User), cartController.addProductToCart)
+    .delete(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor, ROLES_LIST.User), cartController.removeProductFromCart);
 
 // @route GET api/products/top
 router.get('/top', productsController.getTopProducts);

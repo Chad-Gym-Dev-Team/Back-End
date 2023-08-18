@@ -76,14 +76,14 @@ const createProduct = async (req, res) => {
 
     const product = new Product({
         user: foundUser._id,
-        name: "Sample name" || req.body.name,
-        price: 0 || req.body.price,
-        image: "/images/sample.jpg" || req.body.image,
-        brand: "Sample brand" || req.body.brand,
-        category: "Sample category" || req.body.category,
-        countInStock: 0 || req.body.countInStock,
-        numReviews: 0 || req.body.numReviews,
-        description: "Sample description" || req.body.description,
+        name: req.body.name || "Sample name",
+        price: req.body.price || 0,
+        image: req.body.image || "/images/sample.jpg",
+        brand: req.body.brand || "Sample brand",
+        category: req.body.category || "Sample category",
+        countInStock: req.body.countInStock || 0,
+        numReviews: req.body.numReviews || 0,
+        description: req.body.description || "Sample description",
     });
 
     const createdProduct = await product.save();

@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 // @desc    Get info of current user
-// @route   GET /api/users
-// @access  Public
+// @route   GET /api/user
+// @access  Private
 const getUser = async (req, res) => {
     const cookies = req.cookies;
     if (!cookies?.jwt) return res.sendStatus(401); //Unauthorized
@@ -30,7 +30,7 @@ const getUser = async (req, res) => {
 
 // @desc    Change password, name of current user
 // @route   PUT /api/users
-// @access  Public
+// @access  Private
 const updateUser = async (req, res) => {
     const cookies = req.cookies;
     if (!cookies?.jwt) return res.sendStatus(401); //Unauthorized
@@ -57,8 +57,8 @@ const updateUser = async (req, res) => {
 };
 
 // @desc    Delete current user
-// @route   DELETE /api/users
-// @access  Public
+// @route   DELETE /api/user
+// @access  Private
 const deleteUser = async (req, res) => {
     const cookies = req.cookies;
     if (!cookies?.jwt) return res.sendStatus(401); //Unauthorized
