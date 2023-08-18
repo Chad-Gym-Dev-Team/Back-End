@@ -60,3 +60,5 @@ POST /products/:id/addtocart
 # remove a product from cart
 DELETE /prodcuts/:id/addtocart
 ```
+
+Read more by postman [here](https://documenter.getpostman.com/view/25274113/2s9Y5R37BC)
